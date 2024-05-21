@@ -7,7 +7,6 @@ import Image from 'next/image';
 import logo from '../assets/logo.png'
 
 
-
 const drawerWidth = 240;
 
 const navItems = ['Home', 'Recruiters', 'Job Seekers'];
@@ -41,10 +40,10 @@ const Header = (props) => {
 
     return (
         <>
-            <Box sx={{ display: 'flex' }}>
+            <Box sx={{ display: {lg:'flex',sm:'none',xs:'none'} }}>
                 <CssBaseline />
                 <AppBar component="nav" sx={{ backgroundColor: 'white' }}>
-                    <Toolbar sx={{ display:'flex',justifyContent:'space-between',alignItems:'center' }} >
+                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >
                         <IconButton
                             color="black"
                             aria-label="open drawer"
@@ -54,10 +53,10 @@ const Header = (props) => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Box sx={{ width:'100px' }}>
-                        <Image src={logo} alt='hirect' width="100%" />
+                        <Box sx={{ width: '100px' }}>
+                            <Image src={logo} alt='hirect' width="100%" />
                         </Box>
-                        
+
 
                         <Box sx={{ display: { xs: 'none', sm: 'block', lg: 'flex' } }}>
                             {navItems.map((item) => (
@@ -66,20 +65,21 @@ const Header = (props) => {
                                 </Button>
                             ))}
                             <Box sx={{ display: 'flex' }}>
-                            <Button sx={{ borderRadius: '20px', textTransform: 'capitalize', border: '1px solid #2ce2a2', color: 'black' }} variant='outlined'>Recruiter Login</Button>
-                            <Button sx={{ borderRadius: '20px', backgroundColor: '#2ce2a2', color: 'black', textTransform: 'capitalize', ml: '20px' }} variant='contained'>Download App</Button>
-                            <IconButton
-                                color="black"
-                                aria-label="open drawer"
-                                edge="start"
-                                onClick={handleDrawerToggle}
-                                sx={{ ml: 2 }}
-                            >
-                                <MenuIcon />
-                            </IconButton>
+                                <Button sx={{ borderRadius: '20px', textTransform: 'capitalize', border: '1px solid #2ce2a2', color: 'black' }} variant='outlined'>Recruiter Login</Button>
+                                <Button sx={{ borderRadius: '20px', backgroundColor: '#2ce2a2', color: 'black', textTransform: 'capitalize', ml: '20px' }} variant='contained'>Download App</Button>
+                                <IconButton
+                                    color="black"
+                                    aria-label="open drawer"
+                                    edge="start"
+                                    onClick={handleDrawerToggle}
+                                    sx={{ ml: 2 }}
+                                >
+                                    { }
+                                    <MenuIcon />
+                                </IconButton>
+                            </Box>
                         </Box>
-                        </Box>
-                        
+
                     </Toolbar>
                 </AppBar>
                 <nav>
@@ -103,7 +103,6 @@ const Header = (props) => {
                     <Toolbar />
                 </Box>
             </Box>
-
         </>
     )
 }
