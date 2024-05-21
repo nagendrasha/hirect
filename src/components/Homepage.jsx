@@ -160,7 +160,7 @@ const Home = () => {
         <Grid container >
           {trendingCat.map((item) => (
             <Grid item lg={3} md={6} sm={6} xs={6} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'space-around' }}>
-              <Box width={250} my={3} sx={{ p: 5, borderRadius: '30px', boxShadow: 1, '&:hover': { scale: 1 } }}>
+              <Box width={200} my={3} sx={{ p: 5, borderRadius: '30px', boxShadow: 1, '&:hover': { scale: 1 } }}>
                 <Typography sx={{ fontSize: { lg: '25px', sm: '20', xs: '20' } }}>{item.title}</Typography>
                 <Typography sx={{ mt: 1, fontSize: { lg: '18px', sm: '14px', xs: '14px' } }}>{item.desc}</Typography>
               </Box>
@@ -189,7 +189,7 @@ const Home = () => {
         <Grid item lg={6} sx={{ alignItems: 'center', pl: 10 }}>
           <Typography sx={{ mt: 10, fontWeight: 'bold' }} variant='h3'>Hire Directly with Hirect</Typography>
           <Typography sx={{ mt: 4 }}>3.8M+ candidates chat directly with 190K+ recruiters on Hirect.</Typography>
-          <Button sx={{ backgroundColor: 'white', color: 'black', mt: 3, borderRadius: '30px' }} variant='contained'>Instant Hiring</Button>
+          <Button sx={{ backgroundColor: 'white', color: 'black', mt: 3,mb:3, borderRadius: '30px' }} variant='contained'>Instant Hiring</Button>
         </Grid>
       </Grid>
 
@@ -199,14 +199,13 @@ const Home = () => {
         </Grid>
 
 
-        <Grid lg={12} sm={12} xs={12} sx={{ mx:{lg:40,sm:0,xs:0}, mt: 5, display: 'flex', justifyContent: 'space-between' }}>
+        <Grid lg={12} sm={12} xs={12} sx={{ mx:{lg:40,sm:0,xs:0}, mt: 5, display: 'flex', justifyContent: 'space-between' ,flexDirection:{lg:'row',sm:'column',xs:'column'} }}>
           {
             city.map((e) => (
               <Image src={e.image} />
             ))
           }
         </Grid>
-
 
         <Button sx={{ backgroundColor: 'white', color: 'black', mt: 3, borderRadius: '30px' }} variant='outlined'>View More</Button>
       </Grid>
