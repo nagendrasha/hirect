@@ -13,10 +13,15 @@ import bengalure from '../assets/Bengaluru.png';
 import mumbai from '../assets/Mumbai.png';
 import hyderabad from '../assets/Hyderabad.png';
 import pune from '../assets/pune.png';
+import lenskart from '../assets/lenskart.png';
+import ajio from '../assets/Ajio.png';
+import flipkart from '../assets/Flipkart.png';
+import udaan from '../assets/Udaan.png';
+import byju from '../assets/Byju.png';
+import squareyard from '../assets/squareyards.png';
+import Footer from './Footer';
 
 const Home = () => {
-
-
 
   const city = [{
     id: 1,
@@ -97,6 +102,26 @@ const Home = () => {
     desc: 'view More'
   }
   ];
+
+  const recruiters = [{
+    id: 1,
+    img: lenskart
+  }, {
+    id: 2,
+    img: ajio
+  }, {
+    id: 3,
+    img: flipkart
+  },{
+    id:4,
+    img:udaan
+  },{
+    id:5,
+    img:byju
+  },{
+    id:6,
+    img:squareyard
+  }];
 
 
   return (
@@ -189,17 +214,17 @@ const Home = () => {
         <Grid item lg={6} sx={{ alignItems: 'center', pl: 10 }}>
           <Typography sx={{ mt: 10, fontWeight: 'bold' }} variant='h3'>Hire Directly with Hirect</Typography>
           <Typography sx={{ mt: 4 }}>3.8M+ candidates chat directly with 190K+ recruiters on Hirect.</Typography>
-          <Button sx={{ backgroundColor: 'white', color: 'black', mt: 3,mb:3, borderRadius: '30px' }} variant='contained'>Instant Hiring</Button>
+          <Button sx={{ backgroundColor: 'white', color: 'black', mt: 3, mb: 3, borderRadius: '30px' }} variant='contained'>Instant Hiring</Button>
         </Grid>
       </Grid>
 
       <Grid container sx={{ my: 10, display: 'flex', justifyContent: 'center' }}>
         <Grid item lg={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Typography sx={{ fontWeight: 'bold',textAlign:'center',fontSize:'45px' }}>Find Candidates in your City</Typography>
+          <Typography sx={{ fontWeight: 'bold', textAlign: 'center', fontSize: '45px' }}>Find Candidates in your City</Typography>
         </Grid>
 
 
-        <Grid lg={12} sm={12} xs={12} sx={{ mx:{lg:40,sm:0,xs:0}, mt: 5, display: 'flex', justifyContent: 'space-between' ,flexDirection:{lg:'row',sm:'column',xs:'column'} }}>
+        <Grid lg={12} sm={12} xs={12} sx={{ mx: { lg: 40, sm: 0, xs: 0 }, mt: 5, display: 'flex', justifyContent: 'space-between', flexDirection: { lg: 'row', sm: 'column', xs: 'column' } }}>
           {
             city.map((e) => (
               <Image src={e.image} />
@@ -209,6 +234,34 @@ const Home = () => {
 
         <Button sx={{ backgroundColor: 'white', color: 'black', mt: 3, borderRadius: '30px' }} variant='outlined'>View More</Button>
       </Grid>
+
+      <Grid container sx={{ my: 10, display: 'flex', justifyContent: 'center' }}>
+        <Grid item lg={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Typography sx={{ fontWeight: 'bold', textAlign: 'center', fontSize: '45px' }}>More than <span style={{ color: '#2ce2a2' }}>190K</span>  Recruiters trust  <span style={{ color: '#2ce2a2' }}>Hirect</span>
+          </Typography>
+        </Grid>
+
+        
+          <Grid item sx={{ mx: { lg: 40, sm: 0, xs: 0 }, mt: 5,display: 'flex', justifyContent: 'space-between', flexDirection: { lg: 'row', sm: 'column', xs: 'column' } }} >
+            {
+          recruiters.map((e) => (
+              <Box
+                sx={{ boxShadow: 4, borderRadius: '10px', mx: 2 }}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                width={150}
+                height={50}
+              >
+                <Image src={e.img} />
+
+              </Box>
+                ))
+              }
+            </Grid>
+        
+      </Grid>
+      <Footer/>
     </>
   )
 }
