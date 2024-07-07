@@ -9,7 +9,7 @@ import logo from '../assets/logo.png'
 
 const drawerWidth = 240;
 
-const navItems = ['Home', 'Recruiters', 'Job Seekers'];
+const navItems = ['Homes', 'Recruiters', 'Job Seekers'];
 
 const Header = (props) => {
 
