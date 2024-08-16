@@ -19,6 +19,7 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import logo from "../assets/logo.png";
+import Link from "next/link";
 
 const drawerWidth = 240;
 
@@ -53,7 +54,7 @@ const Header = (props) => {
 
   return (
     <>
-      <Box sx={{ display: { lg: "flex", sm: "flex", xs: "flex" } }}>
+      <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar component="nav" sx={{ backgroundColor: "white" }}>
           <Toolbar
@@ -74,15 +75,21 @@ const Header = (props) => {
               sx={{ mr: 2, display: { sm: "none" } }}
             >
               <Box sx={{ border: "1px solid #2ce2a2", padding: "3px" }}>
-                <MenuIcon sx={{ fontSize:'30px' }} />
+                <MenuIcon sx={{ fontSize: "30px" }} />
               </Box>
             </IconButton>
             <Box sx={{ display: { xs: "none", sm: "block", lg: "flex" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "black" }}>
-                  {item}
-                </Button>
-              ))}
+              <ul className="nav-item">
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="/connect">Recruiters</Link>
+                </li>
+                <li>
+                  <Link href="/job-seeker">Job Seekers</Link>
+                </li>
+              </ul>
               <Box sx={{ display: "flex" }}>
                 <Button
                   sx={{
@@ -115,7 +122,7 @@ const Header = (props) => {
                   sx={{ ml: 2 }}
                 >
                   {}
-                  {/* <MenuIcon /> */}
+                  <MenuIcon />
                 </IconButton>
               </Box>
             </Box>

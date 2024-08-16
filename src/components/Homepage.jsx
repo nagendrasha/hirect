@@ -141,7 +141,7 @@ const Home = () => {
 
   return (
     <>
-      <Header />
+    <Header/>
       <Grid container sx={{ display: "flex", justifyContent: "center" }}>
         <Typography
           sx={{
@@ -482,7 +482,7 @@ const Home = () => {
           ))}
         </Grid>
       </Grid>
-      <Footer />
+      <Footer/>
     </>
   );
 };

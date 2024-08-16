@@ -1,0 +1,9 @@
+.nav-item{
+    display: flex;
+    /* text-decoration: none; */
+}
+.nav-item li{
+    list-style: none;
+    padding: 5px;
+    text-decoration: none;
+}
