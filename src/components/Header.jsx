@@ -87,16 +87,18 @@ const Header = (props) => {
                   <Link href="/connect">Recruiters</Link>
                 </li>
                 <li>
-                  <Link href="/job-seeker">Job Seekers</Link>
+                  <Link href="/jobs">Job Seekers</Link>
                 </li>
               </ul>
-              <Box sx={{ display: "flex" }}>
+              <Box sx={{ display: "flex", mt:'10px',mb:'10px' }}>
                 <Button
                   sx={{
                     borderRadius: "20px",
                     textTransform: "capitalize",
                     border: "1px solid #2ce2a2",
                     color: "black",
+                    padding: "5px 15px", // Adjust padding to decrease height
+                    fontSize: "14px", // Adjust font size if needed
                   }}
                   variant="outlined"
                 >
@@ -109,11 +111,14 @@ const Header = (props) => {
                     color: "black",
                     textTransform: "capitalize",
                     ml: "20px",
+                    padding: "5px 15px", // Adjust padding to decrease height
+                    fontSize: "14px", // Adjust font size if needed
                   }}
                   variant="contained"
                 >
                   Download App
                 </Button>
+
                 <IconButton
                   color="black"
                   aria-label="open drawer"
@@ -121,7 +126,7 @@ const Header = (props) => {
                   onClick={handleDrawerToggle}
                   sx={{ ml: 2 }}
                 >
-                  {}
+                  { }
                   <MenuIcon />
                 </IconButton>
               </Box>
